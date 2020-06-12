@@ -1,5 +1,7 @@
 <?php
 
+$path = defined('PATH_site') ? PATH_site : \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
+
 return [
 	'db' => [
 		'adapter' => 'mysql',
@@ -19,23 +21,23 @@ return [
 	'fs' => [
 		'adapter' => 'Standard',
 		'baseurl' => '/uploads/tx_aimeos',
-		'basedir' => PATH_site . 'uploads/tx_aimeos',
-		'tempdir' => PATH_site . 'typo3temp',
+		'basedir' => $path . 'uploads/tx_aimeos',
+		'tempdir' => $path . 'typo3temp',
 	],
 	'fs-admin' => [
 		'adapter' => 'Standard',
-		'basedir' => PATH_site . 'typo3temp/.aimeos',
-		'tempdir' => PATH_site . 'typo3temp',
+		'basedir' => $path . 'typo3temp/.aimeos',
+		'tempdir' => $path . 'typo3temp',
 	],
 	'fs-import' => [
 		'adapter' => 'Standard',
-		'basedir' => PATH_site . 'fileadmin/.aimeos',
-		'tempdir' => PATH_site . 'typo3temp',
+		'basedir' => $path . 'fileadmin/.aimeos',
+		'tempdir' => $path . 'typo3temp',
 	],
 	'fs-secure' => [
 		'adapter' => 'Standard',
-		'basedir' => PATH_site . 'uploads/tx_aimeos/.secure',
-		'tempdir' => PATH_site . 'typo3temp',
+		'basedir' => $path . 'uploads/tx_aimeos/.secure',
+		'tempdir' => $path . 'typo3temp',
 	],
 	'mq' => [
 		'adapter' => 'Standard',
